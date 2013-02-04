@@ -26,18 +26,18 @@
   </developers>
 
   <repositories>
-    <repository>
-      <id>projectodd-upstream</id>
-      <name>project:odd Upstream Builds</name>
-      <url>https://repository-projectodd.forge.cloudbees.com/upstream</url>
-      <layout>default</layout>
-      <releases>
-        <enabled>true</enabled>
-      </releases>
-      <snapshots>
-        <enabled>false</enabled>
-      </snapshots>
-    </repository>
+      <repository>
+          <id>projectodd-upstream</id>
+          <name>project:odd Upstream Builds</name>
+          <url>https://repository-projectodd.forge.cloudbees.com/upstream</url>
+          <layout>default</layout>
+          <releases>
+              <enabled>true</enabled>
+          </releases>
+          <snapshots>
+              <enabled>false</enabled>
+          </snapshots>
+      </repository>
         <repository>
             <id>projectodd-snapshot</id>
             <name>project:odd snapshot Builds</name>
@@ -65,7 +65,7 @@
   </repositories>
 
   <properties>
-    <version.vertx>2.0.0.SNAPSHOT</version.vertx>
+    <version.vertx>2.0.0-SNAPSHOT</version.vertx>
   </properties>    
 
   <dependencies>
@@ -81,24 +81,16 @@
           <version>${version.vertx}</version>
           <scope>compile</scope>
       </dependency>
-        <dependency>
-            <groupId>org.vert-x</groupId>
-            <artifactId>vertx-testframework</artifactId>
-            <version>${version.vertx}</version>
-            <scope>test</scope>
-        </dependency>
+      <dependency>
+          <groupId>org.vert-x</groupId>
+          <artifactId>vertx-testframework</artifactId>
+          <version>${version.vertx}</version>
+          <scope>test</scope>
+      </dependency>
       
   </dependencies>
 
 	<build>
-        <extensions>
-            <extension>
-                <groupId>org.apache.maven.wagon</groupId>
-                <artifactId>wagon-webdav-jackrabbit</artifactId>
-                <version>1.0-beta-7</version>
-            </extension>
-        </extensions>
-    
 		<plugins>
 			<plugin>
 				<groupId>com.github.searls</groupId>

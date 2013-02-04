@@ -1,5 +1,5 @@
 
-describe('assert module'), function() {
+describe('assert module', function() {
 	
 	beforeEach(function() {
     // setup stuff
@@ -10,9 +10,9 @@ describe('assert module'), function() {
 	});
 		
 	//Specs
-	describe('require',function() {
+	describe('require("assert")',function() {
 		it('does not fail"',function(){
-      var assert = "adsfadf";
+      var assert = require('assert')
 			expect(assert).toBe('Remember to use new on constructors!');
 		});
 	});
